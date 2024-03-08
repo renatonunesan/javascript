@@ -1,56 +1,65 @@
-// testes com objetos
+const listaAnimais = document.querySelector('.animais-lista');
+console.log(listaAnimais.clientHeight);
+console.log(listaAnimais.scrollHeight);
 
-const menu = document.querySelector('.menu');
+const animaisTopo = listaAnimais.offsetTop; // Distância entre o topo do elemento e o topo da página
+console.log(animaisTopo);
 
-menu.classList.add('ativo');
-menu.classList.remove('ativo');
-menu.classList.toggle('ativo');
+const animaisLeft = listaAnimais.offsetLeft; // Distância entre o canto esquerdo do elemento e o canto esquerdo da página
+console.log(animaisLeft);
 
-if(menu.classList.contains('azul')) {
-    menu.classList.add('possui-azul');
-} else {
-    menu.classList.add('nao-possui-azul');
-}
+const primeiroH1 = document.querySelector('h1');
+const h1top = primeiroH1.offsetTop;
 
-menu.className += ' vermelho'
+console.log(h1top);
 
-menu.classList.remove('ativo', 'nao-possui-azul', 'vermelho');
+//window.innerWidth; -> Width da janela
+//window.innerHeight; -> Height da janela
 
-console.log(menu.classList);
-
-// testes com atributos
-
-const animais = document.querySelector('.animais');
-
-console.log(animais.attributes);
-
+//window.pageYOffset; -> distância total do scroll horizontal
+//window.pageXOffset; -> distância total do scroll vertical
 
 // ex001
 
-const itensMenu = document.querySelectorAll('.menu a');
-itensMenu.forEach((item) => {
-    item.classList.add('ativo');
-});
+const pImg = document.querySelector('img');
+const distpImg = pImg.offsetTop;
+
+console.log(distpImg);
 
 // ex002
 
-itensMenu.forEach((item) => {
-    item.classList.remove('ativo');
-});
+function somaImagens() {
+    const imgs = document.querySelectorAll('img');
+    let soma = 0;
+    imgs.forEach((item) => {
+        soma += item.offsetWidth;
+    });
+    console.log(soma);
+}
 
-itensMenu[0].classList.add('ativo');
+window.onload = function() {
+    somaImagens();
+}
 
 // ex003
 
-const imagens = document.querySelectorAll('img');
+const links = document.querySelectorAll('a');
 
-imagens.forEach((item) => {
-    const possuiAtributo = item.hasAttribute('alt');
-    console.log(possuiAtributo);
-})
+links.forEach((item) => {
+    const linkWidth = item.offsetWidth;
+    const linkHeight = item.offsetHeight;
+    if (linkWidth >= 48 && linkHeight >= 48) {
+        console.log(item, 'adequado')
+    } else {
+        console.log(item, 'Não adequado')
+    }
+});
 
 // ex004
 
-const lExterno = document.querySelector('a[href^="http"]');
+const smallBrowser = window.matchMedia('(max-width: 720px)').matches;
 
-lExterno.setAttribute('href', 'https://www.google.com/')
+if(smallBrowser) {
+    const menu = document.querySelector('.menu');
+    menu.classList.add('menu-mabole');
+}
