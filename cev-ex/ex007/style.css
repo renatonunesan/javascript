@@ -1,0 +1,14 @@
+body {
+    display: block;
+    margin: auto;
+    text-align: center;
+    font: normal 18pt 'IBM Plex Mono';
+}
+input {
+    font: normal 18pt 'IBM Plex Mono';
+    width: 100px;
+}
+
+#res {
+    margin-top: 20px;
+}
