@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Button Creator</title>
+</head>
+<body>
+    <section class="button-creator">
+        <form id="controles">
+            <label for="texto">Texto:</label>
+            <input type="text" name="texto" id="texto" placeholder="Escreva seu texto">
+            <label for="color">Cor:</label>
+            <input type="color" name="color" id="color">
+            <label for="backgroundColor">Cor de fundo:</label>
+            <input type="color" name="backgroundColor" id="backgroundColor">
+            <label for="height">Height:</label>
+            <input type="range" name="height" id="height" min="0" max="200">
+            <label for="width">Width:</label>
+            <input type="range" name="width" id="width" min="0" max="600">
+            <label for="border">Border:</label>
+            <input type="text" name="border" id="border" placeholder="Escreva o estilo css">
+            <label for="borderRadius">Border Radius:</label>
+            <input type="range" nome="borderRadius" id="borderRadius" min="0" max="20">
+            <select name="fontFamily" id="fontFamily">
+                <option value="Arial">Arial</option>
+                <option value="Georgia">Georgia</option>
+                <option value="monospace">monospace</option>
+            </select>
+            <label for="fontSize">Font size:</label>
+            <input type="number" name="fontSize" id="fontSize">
+        </form>
+        <section class="resultado">
+            <button class="btn">Exemplo de texto</button>
+            <pre><code class="css"></code></pre>
+        </section>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
