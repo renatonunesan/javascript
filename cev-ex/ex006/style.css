@@ -1,0 +1,13 @@
+div {
+    display: block;
+    margin: auto;
+    font-family: 'IBM Plex Mono';
+    font-size: 10pt;
+    font-weight: bold;
+    background-color: rgb(129, 190, 38);
+    color: white;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+}
