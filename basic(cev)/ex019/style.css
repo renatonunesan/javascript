@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(40, 40, 40);
+    font: normal 15pt 'IBM Plex Mono';
+    text-align: center;
+}
+
+header {
+    color: white;
+}
+
+section {
+    margin: auto;
+    background-color: white;
+    width: 600px;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.446);
+}
+
+select#seltab {
+    width: 200px;
+    text-align: center;
+    font-size: .9rem;
+}
+
+footer {
+    color: white;
+}
+
+a.linkE {
+    text-decoration: none;
+    font-style: italic;
+    color: white;
+    transition-duration: 0.5s;
+}
+
+a.linkE:hover {
+    color: cyan;
+    text-decoration: underline;
+}
