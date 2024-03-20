@@ -1,0 +1,16 @@
+body{
+    background-color: rgb(40, 40, 40);
+    font: normal 15pt 'IBM Plex Mono';
+    text-align: center;
+}
+
+section {
+    border: 2px solid black;
+    padding: 20px;
+    width: 600px;
+    margin: 50px auto;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.446);
+}
+
