@@ -1,0 +1,12 @@
+[
+    {
+        "id": 1,
+        "aula": "PHP",
+        "tempo": "30min"
+    },
+    {
+        "id": 2,
+        "aula": "Rust",
+        "tempo": "40min"
+    }
+]
